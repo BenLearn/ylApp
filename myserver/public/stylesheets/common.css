@@ -1,10 +1,40 @@
 /**
 	监控app css
 **/
-html {font-size: 625%; /*100 ÷ 16 × 100% = 625%*/}
-body{font-family:Helvetica;}
+html {/* font-size: 625%; */ /*100 ÷ 16 × 100% = 625%*/}
 
-@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+body{font-family:Helvetica; margin: 0; padding: 0; }
+a{text-decoration: none!important; outline:none;}
+ul{padding:0; margin: 0;}
+li{ list-style-type :none;}
+.Fl{float: left;}
+.Fr{float: right;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden;}
+
+/* div {
+
+    
+    font-size: 12px;
+    默认写上dpr为1的fontSize
+    
+    }
+
+[data-dpr="2"]
+div {
+
+font-size: 24px;
+
+}
+
+[data-dpr="3"]
+div {
+
+font-size: 36px;
+
+} */
+
+/* @media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
     html { font-size: 703%; }
 }
 @media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
@@ -21,4 +51,72 @@ body{font-family:Helvetica;}
 }
 @media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
     html { font-size: 843.75%; }
+} */
+
+.body_bg{background: #eaeaea;}
+.index_title_box{background: #057CC7;}
+.swiper-container.index_title{ line-height: 2.8125rem /* 45/16 */ ; width: 75%;}
+.swiper-container.index_title .swiper-slide{font-size: .875rem /* 14/16 */ /* 14/16 */; color:#fff; text-align: center;}
+.swiper-container.index_title .swiper-slide.active-nav::before{content:''; position: absolute; 
+    bottom: 0; left: 50%; width: 0.2rem; height: 0.03rem; margin-left: -0.1rem; border-radius: 2px; background: #fff!important;}
+.index_alarm{padding-top:0.15rem; margin-bottom:0.15rem; background:#fff;}
+.index_alarm ul li{float: left; width: 33.3333%; text-align: center; margin-bottom: 0.15rem;} 
+.alarm_list_C{cursor:pointer; width:0.6rem; margin:0 auto;}
+.alarm_list_pie{width: 0.4rem; height: 0.4rem; line-height: 0.4rem; font-size: 0.13rem; color:#fff; border-radius: 50%; margin:0 auto 0.05rem;}
+.alarm_list_name{font-size: 0.11rem;}
+.alarm_list_pie.red{background: #FF4280;
+    background: -webkit-linear-gradient(top,#FFB266 0%, #FF4280 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,#FFB266 0%, #FF4280 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,#FFB266 0%, #FF4280 100%); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(top,#FFB266 0%, #FF4280 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(top,#FFB266 0%, #FF4280 100%); /* 标准写法 */}
+.alarm_list_pie.red+.alarm_list_name{color:#E93567;}
+.alarm_list_pie.orange{background: #F09E55;
+    background: -webkit-linear-gradient(top,#FFC466 0%, #F09E55 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,#FFC466 0%, #F09E55 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,#FFC466 0%, #F09E55 100%); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(top,#FFC466 0%, #F09E55 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(top,#FFC466 0%, #F09E55 100%); /* 标准写法 */
+
 }
+.alarm_list_pie.orange+.alarm_list_name{color:#E38F41;}
+.alarm_list_pie.yellow{background: #F8BA35;
+    background: -webkit-linear-gradient(top,#E8EA1E 0%, #F8BA35 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,#E8EA1E 0%, #F8BA35 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,#E8EA1E 0%, #F8BA35 100%); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(top,#E8EA1E 0%, #F8BA35 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(top,#E8EA1E 0%, #F8BA35 100%); /* 标准写法 */
+
+}
+.alarm_list_pie.yellow+.alarm_list_name{color:#E8B844;}
+.alarm_list_pie.blue{background: #0D87D5;
+    background: -webkit-linear-gradient(top,#33E9FF 0%, #0D87D5 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,#33E9FF 0%, #0D87D5 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,#33E9FF 0%, #0D87D5 100%); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(top,#33E9FF 0%, #0D87D5 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(top,#33E9FF 0%, #0D87D5 100%); /* 标准写法 */
+
+}
+.alarm_list_pie.blue+.alarm_list_name{color:#067CC7;}
+.alarm_list_pie.green{background: #33D6FF;
+    background: -webkit-linear-gradient(top,#0DD5C0 0%, #33D6FF 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,#0DD5C0 0%, #33D6FF 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,#0DD5C0 0%, #33D6FF 100%); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(top,#0DD5C0 0%, #33D6FF 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(top,#0DD5C0 0%, #33D6FF 100%); /* 标准写法 */
+
+}
+.alarm_list_pie.green+.alarm_list_name{color:#0EB0CA;}
+.alarm_list_pie.purple{background: #8974E6;
+    background: -webkit-linear-gradient(top,#76ADFF 0%, #8974E6 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,#76ADFF 0%, #8974E6 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,#76ADFF 0%, #8974E6 100%); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(top,#76ADFF 0%, #8974E6 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(top,#76ADFF 0%, #8974E6 100%); /* 标准写法 */
+
+}
+.alarm_list_pie.purple+.alarm_list_name{color:#725BDB;}
+
+.index_spread ul li{background: #fff; margin-bottom:0.01rem;}
+.spread_title{color:#333333; font-size: 0.12rem; text-align: center; padding-top:0.15rem;}
+.spread_echart{width: 100%; height:3rem;}

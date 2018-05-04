@@ -1,0 +1,14 @@
+{
+    "name": "project",
+    "version": "1.0.0",
+    "description": "index.js",
+    "scripts": {
+        "test": "echo\"ERROR:no test specified\"&&exit 1"
+    },
+    "author": "",
+    "licence": "ISC",
+    "dependencies": {
+        "gulp": "^3.9.1",
+        "gulp-sass": "^4.0.1"
+    }
+}
