@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> -->
+<meta name="viewport" content="">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>监控-app</title>
+<!-- <link rel="stylesheet" href="../AmazeUI-2.7.2/assets/css/amazeui.flat.css"> --> <!--圆角版 Amaze UI CSS-->
+<!-- <link rel="stylesheet" href="../AmazeUI-2.7.2/assets/css/app.css"> -->
+<link rel="stylesheet" href="../stylesheets/swiper.css">
+<link rel="stylesheet" href="../iconfont/iconfont.css">
+<!- 字体图标库 ->
+<link rel="stylesheet" href="../stylesheets/mescroll.min.css">
+<link rel="stylesheet" href="../stylesheets/layer.css">
+<link rel="stylesheet" href="../stylesheets/form.css">
+<link rel="stylesheet" href="../stylesheets/common.css">
+</head>
+
+<body>
+    <div class="wrap flex flex-v">
+        <div class="index_title_box">
+                <div class="swiper-container index_title" id="swiper-container2">
+                        <div class="swiper-wrapper">
+                                <div class="swiper-slide font18 active-nav">概览</div>
+                                <div class="swiper-slide font18">告警</div>
+                                <div class="swiper-slide font18">资源</div>
+                        </div>
+                </div>
+        </div>
+        <div class="index_content_box main flex-1 mescroll" id="mescroll">
+            <div class="swiper-container  index_content" id="swiper-container3">
+                    <div class="swiper-wrapper">
+                            <!-- 概览start -->
+                            <div class="swiper-slide body_bg">
+                                    <div class="index_alarm">
+                                    <ul class="clearfix">
+                                            <li>
+                                                <div class="index_alarm_list_C">   
+                                                    <div class="index_alarm_list_pie font14 red">14</div>
+                                                    <div class="index_alarm_list_name">紧急告警</div>
+                                                </div> 
+                                            </li>
+                                            <li>
+                                                <div class="index_alarm_list_C"> 
+                                                    <div class="index_alarm_list_pie font14 orange">12</div>
+                                                    <div class="index_alarm_list_name">主要告警</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="index_alarm_list_C"> 
+                                                    <div class="index_alarm_list_pie font14 yellow">17</div>
+                                                    <div class="index_alarm_list_name">次要告警</div>
+                                                </div>
+                                            </li>
+                                            <li>                                                
+                                                <div class="index_alarm_list_C"> 
+                                                    <div class="index_alarm_list_pie font14 blue">21</div>
+                                                    <div class="index_alarm_list_name">警告告警</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="index_alarm_list_C"> 
+                                                    <div class="index_alarm_list_pie font14 green">84</div>
+                                                    <div class="index_alarm_list_name">清除告警</div>
+                                                </div>    
+                                            </li>
+                                            <li>
+                                                <div class="index_alarm_list_C"> 
+                                                    <div class="index_alarm_list_pie font14 purple">26</div>
+                                                    <div class="index_alarm_list_name">接口预警</div>
+                                                </div>
+                                            </li>
+                                    </ul>     
+                                    </div>
+                                    <div class="index_spread">
+                                        <ul class="clearfix">
+                                            <li>
+                                                <div class="spread_title">主机告警分布</div>
+                                                <div class="spread_echart" id="spread_echart01"></div>    
+                                            </li> 
+                                            <li>
+                                                <div class="spread_title">网络告警分布</div>
+                                                <div class="spread_echart" id="spread_echart02"></div>    
+                                            </li>   
+                                            <li>
+                                                <div class="spread_title">应用告警分布</div>
+                                                <div class="spread_echart" id="spread_echart03"></div>    
+                                            </li>   
+                                        </ul>            
+                                    </div>
+                            </div>
+                            <!-- 概览end -->
+                            <!-- 告警start -->
+                            <div class="swiper-slide body_bg">
+                                <div class="alarm_box">
+                                
+                                </div>
+                            </div>
+                            <!-- 告警end -->
+                            <!-- 资源start -->
+                            <div class="swiper-slide bgfff">
+                                <div class="resource_top">
+                                    <div><button class="bt_blue bt_radius" type="button">CPU使用率TOP5</button></div>
+                                    <div><button class="bt_orange bt_radius" type="button">内存使用率TOP5</button></div>
+                                    <div><button class="bt_red bt_radius" type="button">响应时间TOP5</button></div>
+                                </div>
+                                <div class="resource_h body_bg"></div>
+                                <div class="resource_content" id="resource_content">
+                                    <div class="resource_box">
+                                        <div class="resource_box_title font14">
+                                            <span class="iconfont icon-ziyuan1 font14"></span>三层交换机
+                                        </div>
+                                        <ul class="clearfix">
+                                            <li class="c_blue"><span class="iconfont icon-bulb"></span>正常[15]</li>
+                                            <li class="c_red"><span class="iconfont icon-bulb"></span>紧急[2]</li>
+                                            <li class="c_orange"><span class="iconfont icon-bulb"></span>主要[12]</li>
+                                            <li class="c_gray"><span class="iconfont icon-bulb"></span>不可用[1]</li>
+                                        </ul>
+                                    </div>
+                                    <div class="resource_box">
+                                        <div class="resource_box_title font14">
+                                            <span class="iconfont icon-ziyuan1 font14"></span>二层交换机
+                                        </div>
+                                        <ul class="clearfix">
+                                            <li class="c_blue"><span class="iconfont icon-bulb"></span>正常[15]</li>
+                                            <li class="c_red"><span class="iconfont icon-bulb"></span>紧急[2]</li>
+                                            <li class="c_orange"><span class="iconfont icon-bulb"></span>主要[12]</li>
+                                            <li class="c_gray"><span class="iconfont icon-bulb"></span>不可用[1]</li>
+                                        </ul>
+                                    </div>
+                                    <div class="resource_box">
+                                        <div class="resource_box_title font14">
+                                            <span class="iconfont icon-ziyuan1 font14"></span>业务系统
+                                        </div>
+                                        <ul class="clearfix">
+                                            <li class="c_blue"><span class="iconfont icon-bulb"></span>正常[15]</li>
+                                            <li class="c_red"><span class="iconfont icon-bulb"></span>紧急[2]</li>
+                                            <li class="c_orange"><span class="iconfont icon-bulb"></span>主要[12]</li>
+                                            <li class="c_gray"><span class="iconfont icon-bulb"></span>不可用[1]</li>
+                                        </ul>
+                                    </div>
+                                    <div class="resource_box">
+                                        <div class="resource_box_title font14">
+                                            <span class="iconfont icon-ziyuan1 font14"></span>服务器
+                                        </div>
+                                        <ul class="clearfix">
+                                            <li class="c_blue"><span class="iconfont icon-bulb"></span>正常[15]</li>
+                                            <li class="c_red"><span class="iconfont icon-bulb"></span>紧急[2]</li>
+                                            <li class="c_orange"><span class="iconfont icon-bulb"></span>主要[12]</li>
+                                            <li class="c_gray"><span class="iconfont icon-bulb"></span>不可用[1]</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 资源end -->
+                    </div>
+            </div>  
+        </div>
+
+
+
+    </div>
+
+</body>
+<script src="../javascripts/jquery1.11.3.min.js"></script>
+<script src="../javascripts/swiper.min.js"></script>
+<!-- <script src="../javascripts/layer.js"></script> -->
+<script src="../javascripts/mescroll.min.js"></script>
+<script src="../javascripts/echarts.simple.min.js"></script> 
+<script src="../javascripts/flexible0.3.2/flexible_css.debug.js"></script>
+<script src="../javascripts/flexible0.3.2/flexible.debug.js"></script>
+<!-- <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script> -->
+<script src="../javascripts/pie.js"></script>
+<!-- <script src="../AmazeUI-2.7.2/assets/js/amazeui.min.js"></script> -->
+<script>
+
+ $(document).ready(function(){
+        spread_echart("spread_echart01");
+        spread_echart("spread_echart02");
+        spread_echart("spread_echart03");
+ }) 
+
+ var mySwiper2 = new Swiper('#swiper-container2',{
+                        watchSlidesProgress : true,
+                        watchSlidesVisibility : true,
+                        slidesPerView : 3,
+                        on:{
+                                tap: function(){
+                                                mySwiper3.slideTo( mySwiper2.clickedIndex)
+                                        }
+                                }
+                        })
+                        var mySwiper3 = new Swiper('#swiper-container3',{
+
+                        on:{
+                                slideChangeTransitionStart: function(){
+                                                updateNavPosition()
+                                        }
+                                }
+
+                        })
+
+                        function updateNavPosition(){
+                                        $('#swiper-container2 .active-nav').removeClass('active-nav')
+                                        var activeNav = $('#swiper-container2 .swiper-slide').eq(mySwiper3.activeIndex).addClass('active-nav');
+
+
+                                        if (!activeNav.hasClass('swiper-slide-visible')) {
+                                         console.log(1);
+                                                if (activeNav.index()>mySwiper2.activeIndex) {
+                                                        console.log(2);
+                                                        var thumbsPerNav = Math.floor(mySwiper2.width/activeNav.width())-1
+                                                        mySwiper2.slideTo(activeNav.index()-thumbsPerNav)
+                                                }
+                                                else {
+                                                        console.log(3);
+                                                        mySwiper2.slideTo(activeNav.index())
+                                                }	
+                                        }
+                                }
+
+//echart实例化
+function spread_echart(id){
+      var mychart = echarts.init(document.getElementById(id));
+      var option = pie.getOption();
+      if(id=="spread_echart01"){
+        var json =    [
+                        {value:335, name:'111'},
+                        {value:310, name:'邮件营销'},
+                        {value:274, name:'联盟广告'},
+                        {value:235, name:'视频广告'},
+                        {value:400, name:'搜索引擎'}
+                    ]   
+        option.series[0].data = json.sort(function (a, b) { return a.value - b.value; })
+      }else if(id=="spread_echart02"){
+        var json =    [
+                        {value:335, name:'222'},
+                        {value:310, name:'邮件营销'},
+                        {value:274, name:'联盟广告'},
+                        {value:235, name:'视频广告'},
+                        {value:400, name:'搜索引擎'}
+                    ]   
+        option.series[0].data = json.sort(function (a, b) { return a.value - b.value; }) 
+      }else if(id=="spread_echart03"){
+        var json =    [
+                        {value:335, name:'333'},
+                        {value:310, name:'邮件营销'},
+                        {value:274, name:'联盟广告'},
+                        {value:235, name:'视频广告'},
+                        {value:400, name:'搜索引擎'}
+                    ]   
+        option.series[0].data = json.sort(function (a, b) { return a.value - b.value; }) 
+      }else{
+              return
+        }
+      pie.initChart(mychart,option);
+}                                
+
+
+</script>
+</html>

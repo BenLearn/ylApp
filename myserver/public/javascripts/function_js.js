@@ -1,0 +1,10 @@
+document.write('<script src="../javascripts/jquery1.11.3.min.js"></script>');
+document.write('<script src="../javascripts/swiper.min.js"></script>');
+document.write('<script src="../javascripts/mescroll.min.js"></script>');
+document.write('<script src="../javascripts/echarts.simple.min.js"></script>');
+document.write('<script src="../javascripts/flexible0.3.2/flexible_css.debug.js"></script>');
+document.write('<script src="../javascripts/flexible0.3.2/flexible.debug.js"></script>');
+//document.write('<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script>');
+document.write('<script src="../javascripts/pie.js"></script>');
+document.write('<script src="../AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>');
+document.write('<script src="../javascripts/dom.js"></script><!- 页面操作通用js ->');

@@ -1,0 +1,23 @@
+{
+    "cpu":[
+        {"name":"DESKTOP-CEKJDIF","num":"95","ip":"192.168.10.67"},
+        {"name":"WIN-BQJ0CUJJ2HM","num":"79","ip":"192.168.10.233"},
+        {"name":"WIN-BI74EKRRTCP","num":"52","ip":"192.168.10.226"},
+        {"name":"switch23a9b7","num":"32","ip":"192.168.10.150"},
+        {"name":"Santorini","num":"16","ip":"192.168.10.123"}
+    ],
+    "memory":[
+        {"name":"DESKTOP-CEKJDIF","num":"95","ip":"1"},
+        {"name":"WIN-BQJ0CUJJ2HM","num":"79","ip":"192.168.10.233"},
+        {"name":"WIN-BI74EKRRTCP","num":"52","ip":"192.168.10.226"},
+        {"name":"switch23a9b7","num":"32","ip":"192.168.10.150"},
+        {"name":"Santorini","num":"16","ip":"192.168.10.123"}
+    ],
+    "time":[
+        {"name":"DESKTOP-CEKJDIF","num":"95","ip":"2"},
+        {"name":"WIN-BQJ0CUJJ2HM","num":"79","ip":"192.168.10.233"},
+        {"name":"WIN-BI74EKRRTCP","num":"52","ip":"192.168.10.226"},
+        {"name":"switch23a9b7","num":"32","ip":"192.168.10.150"},
+        {"name":"Santorini","num":"16","ip":"192.168.10.123"}
+    ]
+}

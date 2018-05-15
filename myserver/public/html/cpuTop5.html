@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> -->
+<meta name="viewport" content="">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>监控-app-cpuTop5</title>
+<script src="../javascripts/function_css.js"></script>
+</head>
+
+<body>
+    <div class="wrap flex flex-v">
+        <div class="index_title_box">
+            <div class="title font18"><button type="button" class="title_back" onclick="historyBack()"><span class="iconfont icon-back font26"></span></button>CPU使用率TOP5</div>
+        </div>
+        <div class="index_content_box main flex-1 body_bg">  
+            <div class="top5_bar" id="top5_bar">
+                <ul>
+                    <!-- <li class="clearfix">
+                        <div>1</div>
+                        <div>DESKTOP-CEKJDIF</div>
+                        <div>
+                            <div class="plan_box">
+                                <div class="plan shine red"><span></span></div>
+                            </div>
+                        </div>
+                        <div>95%</div>
+                    </li>
+                    <li class="clearfix">
+                        <div>2</div>
+                        <div>WIN-BQJ0CUJJ2HM</div>
+                        <div>
+                            <div class="plan_box">
+                                <div class="plan shine orange"><span></span></div>
+                            </div>
+                        </div>
+                        <div>79%</div>
+                    </li>
+                    <li class="clearfix">
+                        <div>3</div>
+                        <div>WIN-BI74EKRRTCP</div>
+                        <div>
+                            <div class="plan_box">
+                                <div class="plan shine pink"><span></span></div>
+                            </div>
+                        </div>
+                        <div>52%</div>
+                    </li>
+                    <li class="clearfix">
+                        <div>4</div>
+                        <div>switch23a9b7</div>
+                        <div>
+                            <div class="plan_box">
+                                <div class="plan shine yellowPro"><span></span></div>
+                            </div>
+                        </div>
+                        <div>32%</div>
+                    </li>
+                    <li class="clearfix">
+                        <div>5</div>
+                        <div>Santorini</div>
+                        <div>
+                            <div class="plan_box">
+                                <div class="plan shine yellow"><span></span></div>
+                            </div>
+                        </div>
+                        <div>16%</div>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="top5_content" id="top5_content">
+                <table class="am-table am-table-bordered am-table-centered">
+                    <thead>
+                        <tr>
+                            <th>设备名称</th>
+                            <th>IP地址</th>
+                            <th>CPU使用率</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <!-- <tr>
+                            <td>DESKTOP-CEKJDIF</td>
+                            <td>192.168.10.67</td>
+                            <td>33%</td>
+                        </tr>
+                        <tr>
+                            <td>WIN-BQJ0CUJJ2HM</td>
+                            <td>192.168.10.67</td>
+                            <td>33%</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+<script src="../javascripts/function_js.js"></script>
+<script>
+
+ $(document).ready(function(){
+    window.onload = function (_type) {
+        console.log('窗口已加载完毕!');
+        $resource.top5Init();        
+    }
+ }) 
+
+ 
+
+
+</script>
+</html>
