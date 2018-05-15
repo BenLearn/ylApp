@@ -1,0 +1,132 @@
+/** 表格样式 **/
+@import "variable";
+
+.c_blue{color:#057CC7!important;}
+.c_orange{color:#e38f41!important;}
+.c_green{color:#0bc19f!important;}
+.c_red{color:#de1e30!important;}
+.c_gray{color:#999!important;}
+
+.bt_radius{ @include radius(.4rem /* 30/75 */);}
+.bt_blue,.bt_orange,.bt_red{
+    color:#fff; 
+    @include fontDpr(11);
+}
+.bt_blue{
+    @include linearGradient(#4EA5DC,#057CC7);   
+}
+.bt_orange{
+    @include linearGradient(#FFC466,#F09E55);
+}
+.bt_red{
+    @include linearGradient(#FC7E6E,#EE2D6C);
+}
+.plan_box{
+    //display:inline-block; 
+    /* width: 120px;  */ width:70%;  
+    height: .266667rem /* 20/75 */; 
+    vertical-align: middle; 
+    position: relative; 
+    cursor: pointer;
+}
+.plan{
+    width:100%; 
+    height: 100%;  
+    display: inline-block; 
+    //overflow: hidden;
+    span{
+        display: inline-block; 
+        width: 100%; 
+        height: 100%; /* -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; */  
+        color:#fff; 
+        text-indent: 1em; 
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+        @include transition(width,.4s);
+
+        li.green &{
+            background-color: #44ddd4; 
+        }
+        li.yellow &{
+            background:rgba(236,198,68,1);
+        }
+        li.yellowPro &{
+            background:rgba(242,188,118,1);
+        }
+        li.pink &{
+            background:rgba(242,155,118,1);
+        }
+        li.orange &{
+            background:rgba(232,106,81,1);
+        }
+        li.red &{
+            background:rgba(212,35,0,1); 
+        }
+    }
+}
+li{
+    &.green{
+        >div{
+            &:first-child,&:last-child{
+                color: #44ddd4;               
+            }
+        }
+    }
+    &.yellow{
+        >div{
+            &:first-child,&:last-child{
+                color: rgba(236,198,68,1);               
+            }
+        }
+    }
+    &.yellowPro{
+        >div{
+            &:first-child,&:last-child{
+                color: rgba(242,188,118,1);               
+            }
+        }
+    }
+    &.pink{
+        >div{
+            &:first-child,&:last-child{
+                color: rgba(242,155,118,1);         
+            }
+        }
+    }
+    &.orange{
+        >div{
+            &:first-child,&:last-child{
+                color: rgba(232,106,81,1);       
+            }
+        }
+    }
+    &.red{
+        >div{
+            &:first-child,&:last-child{
+                color: rgba(212,35,0,1);      
+            }
+        }
+    }
+}
+.shine{
+    >span{position: relative;
+        &::after{
+            content: ''; 
+            opacity: 0; 
+            position: absolute; 
+            top: 0; 
+            right: 0; 
+            bottom: 0; 
+            left: 0; 
+            background: #fff; 
+            @include radius(.133333rem /* 10/75 */ 0 0 .133333rem /* 10/75 */);
+            @include animation(animate-shine,2s);
+        }
+    } //载入的白条
+}
+@include keyframes(width,animate-shine);
+
+.am-table > thead > tr > th, .am-table > tbody > tr > th, .am-table > tfoot > tr > th, .am-table > thead > tr > td, .am-table > tbody > tr > td, .am-table > tfoot > tr > td{padding: .093333rem /* 7/75 */;}
+#swiper-container3 .swiper-wrapper .swiper-slide{overflow-y: auto;}
+#swiper-container3, #swiper-container3 .swiper-wrapper, #swiper-container3 .swiper-wrapper .swiper-slide:nth-child(2){height:100%!important;}

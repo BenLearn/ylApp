@@ -1,0 +1,59 @@
+//公共变量
+@mixin textLine1 {   //单行隐藏
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+@mixin fontDpr($fontSize){    //字体大小  $fontSize ：16
+    font-size: $fontSize * 1px;
+    [data-dpr="2"] & {
+        font-size: $fontSize * 2px;
+    }
+    [data-dpr="3"] & {
+        font-size: $fontSize * 3px;
+    }
+}
+@mixin radius($num){  //椭圆
+    -moz-border-radius: $num; -webkit-border-radius: $num; border-radius: $num;
+}
+@mixin linearGradient($top,$bottom){   //线性渐变
+    background: $bottom;
+    background: -webkit-linear-gradient(top,$top 0%, $bottom 100%);  //Safari 5.1 - 6.0 
+    background: -o-linear-gradient(top,$top 0%, $bottom 100%);  //Opera 11.1 - 12.0 
+    background: -moz-linear-gradient(top,$top 0%, $bottom 100%); //Firefox 3.6 - 15 
+    background: -ms-linear-gradient(top,$top 0%, $bottom 100%); //Firefox 3.6 - 15 
+    background: linear-gradient(top,$top 0%, $bottom 100%); // 标准写法 
+}
+@mixin transition($type,$time){  //变换 $type==变换类型， $time==变换时间
+    -webkit-transition: $type $time ease-in-out;
+    -moz-transition: $type $time ease-in-out;
+    -ms-transition: $type $time ease-in-out;
+    -o-transition: $type $time ease-in-out;
+    transition: $type $time ease-in-out; 
+}
+@mixin keyframes($type,$name){  //定义动画 $type==名称类型， $name==名字
+    @-webkit-keyframes #{$name} { 
+        0% {opacity: 0; #{$type}: 0;}
+        50% {opacity: .5;}
+        100% {opacity: 0; #{$type}: 95%;}  
+    } 
+    @-moz-keyframes #{$name} { 
+        0% {opacity: 0; #{$type}: 0;}
+        50% {opacity: .5;}
+        100% {opacity: 0; #{$type}: 95%;}  
+    } 
+    @-o-keyframes #{$name} { 
+        0% {opacity: 0; #{$type}: 0;}
+        50% {opacity: .5;}
+        100% {opacity: 0; #{$type}: 95%;}  
+    } 
+    @keyframes #{$name} {
+        0% {opacity: 0; #{$type}: 0;}
+        50% {opacity: .5;}
+        100% {opacity: 0; #{$type}: 95%;}  
+    }
+}
+@mixin animation($name,$s){   //动画 (自定义命名，秒)
+    -webkit-animation: $name $s ease-out infinite; -moz-animation: $name $s ease-out infinite; 
+}
+

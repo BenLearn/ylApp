@@ -5,7 +5,7 @@ gulp.task('sass', function(){
     //sass()方法用于转换sass到css
   return gulp.src('sass/*.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('stylesheets'))
 });
 
 //Watching Sass files for changes

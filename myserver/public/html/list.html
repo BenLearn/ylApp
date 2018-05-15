@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> -->
+<meta name="viewport" content="">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>监控-app-list</title>
+<script src="../javascripts/function_css.js"></script>
+</head>
+
+<body>
+    <div class="wrap flex flex-v">
+        <div class="index_title_box">
+            <div class="title">
+                <button type="button" class="title_back" onclick="historyBack()"><span class="iconfont icon-back"></span></button>
+                服务器
+                <button type="button" class="title_search" onclick=""><span class="iconfont icon-ziyuan"></span></button>
+            </div>
+        </div>
+        <div class="main flex-1 body_bg">  
+            <div class="mescroll"  id="mescroll">
+                <div class="list" id="alarm-list"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="../javascripts/function_js.js"></script>
+<script>
+
+ $(document).ready(function(){
+    window.onload = function (_type) {
+        console.log('窗口已加载完毕!');
+        $resource.top5Init();   
+        
+        mescrollInit(); //滚动加载实例化
+    }
+ }) 
+
+ 
+
+
+</script>
+</html>
