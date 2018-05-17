@@ -79,8 +79,12 @@
     -ms-transition: width 0.4s ease-in-out;
     -o-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out; }
+    li.radius .plan span {
+      -moz-border-radius: 0.13333rem 0 0 0.13333rem;
+      -webkit-border-radius: 0.13333rem 0 0 0.13333rem;
+      border-radius: 0.13333rem 0 0 0.13333rem; }
     li.green .plan span {
-      background-color: #44ddd4; }
+      background-color: #1FC28E; }
     li.yellow .plan span {
       background: #ecc644; }
     li.yellowPro .plan span {
@@ -93,7 +97,7 @@
       background: #d42300; }
 
 li.green > div:first-child, li.green > div:last-child {
-  color: #44ddd4; }
+  color: #1FC28E; }
 
 li.yellow > div:first-child, li.yellow > div:last-child {
   color: #ecc644; }

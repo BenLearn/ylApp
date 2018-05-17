@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> -->
+<meta name="viewport" content="">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>监控-app-详情页</title>
+<script src="../javascripts/function_css.js"></script>
+</head>
+
+<body>
+    <div class="wrap flex flex-v" >
+        <div class="index_title_box">
+            <div class="title">
+                <button type="button" class="title_back" onclick="historyBack()"><span class="iconfont icon-back"></span></button>
+                资源详情~~~~
+            </div>
+        </div>
+        <div class="about_title_box">
+                <div class="swiper-container index_title" id="swiper-container4">
+                        <div class="swiper-wrapper">
+                                <div class="swiper-slide active-nav">基本信息</div>
+                                <div class="swiper-slide">告警信息</div>
+                                <div class="swiper-slide">进程</div>
+                                <div class="swiper-slide">分区</div>
+                                <div class="swiper-slide">接口</div>
+                                <div class="swiper-slide">磁盘IO</div>
+                        </div>
+                </div>
+        </div>
+        <div class="index_content_box main flex-1">
+            <div class="swiper-container  index_content" id="swiper-container5">
+                    <div class="swiper-wrapper">
+                            <!-- 基本信息start -->
+                            <div class="swiper-slide">
+                                <div>
+                                    <li>
+                                        <div class="alarm_box">
+                                            <ul>
+                                                <li class="clearfix"><span>主机名：</span><a class="c_blue">ZLW_ssssssssssss</a></li>
+                                                <li class="clearfix"><span>CPU数量：</span><a>4</a></li>
+                                                <li class="clearfix"><span>启动运行时间：</span><a>3 days,6:20:03.64</a></li>
+                                                <li class="clearfix"><span>OS版本：</span></li>
+                                                <li class="clearfix">Hardware: Intel64 Family 6 Model 45 Stepping 6 AT/AT COMPATIBLE</li>
+                                                <li class="clearfix"><span>内存大小：</span><a>8193MB</a></li>
+                                                <li class="clearfix"><span>可用性：</span><a class="c_green">可用</a></li>
+                                                <li class="clearfix green radius">
+                                                    <span>CPU利用率：</span>                                                    
+                                                    <div class="alarm_box_r">
+                                                        <div class="plan_box" style="width:33%">
+                                                            <div class="plan shine"><span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div>33%</div>
+                                                </li>
+                                                <li class="clearfix orange radius">
+                                                    <span>内存利用率：</span>
+                                                    <div class="alarm_box_r">
+                                                        <div class="plan_box" style="width:96%">
+                                                            <div class="plan shine"><span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div>96%</div>
+                                                </li>
+                                            </ul>
+                                        </div>    
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- 基本信息end -->
+                            <!-- 告警信息start -->
+                            <div class="swiper-slide">
+                                <div class="about_alarm" id="about_alarm">
+                                    <div class="about_alarm_box clearfix red">
+                                        <div class="l">
+                                            <span>紧急</span>
+                                        </div>
+                                        <div class="r">
+                                            <a>ZLW_ssssssssssss产生不可用告警</a>
+                                            <span>2017-12-25 15:09:04</span>
+                                        </div>
+                                    </div>
+                                    <div class="about_alarm_box clearfix orange">
+                                        <div class="l">
+                                            <span>主要</span>
+                                        </div>
+                                        <div class="r">
+                                            <a>ZLW_ssssssssssss产生不可用告警</a>
+                                            <span>2017-12-25 15:09:04</span>
+                                        </div>
+                                    </div>
+                                    <div class="about_alarm_box clearfix yellow">
+                                        <div class="l">
+                                            <span>次要</span>
+                                        </div>
+                                        <div class="r">
+                                            <a>ZLW_ssssssssssss产生不可用告警</a>
+                                            <span>2017-12-25 15:09:04</span>
+                                        </div>
+                                    </div>
+                                    <div class="about_alarm_box clearfix blue">
+                                        <div class="l">
+                                            <span>警告</span>
+                                        </div>
+                                        <div class="r">
+                                            <a>ZLW_ssssssssssss产生不可用告警</a>
+                                            <span>2017-12-25 15:09:04</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 告警信息end -->
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                    </div>
+            </div>  
+        </div>
+
+
+
+    </div>
+
+</body>
+<script src="../javascripts/function_js.js"></script>
+<script>
+
+ $(document).ready(function(){
+
+        //mescrollInit(); //滚动加载实例化
+ }) 
+
+ var mySwiper4 = new Swiper('#swiper-container4',{
+                        /* watchSlidesProgress : true,
+                        watchSlidesVisibility : true, */
+                        slidesPerView: 'auto',
+                        //slidesPerView : 3,
+                        on:{
+                                tap: function(){
+                                                mySwiper5.slideTo( mySwiper4.clickedIndex)
+                                        }
+                                }
+                        })
+var mySwiper5 = new Swiper('#swiper-container5',{
+//autoHeight:true,    
+on:{
+        slideChangeTransitionStart: function(){
+                        //$( '.swiper-container' ).scrollTop(0);这样是直接到顶部，往往会出现闪屏，
+                        //$( '.index_content_box' ).animate({scrollTop: 0},10);//动画慢慢过渡到顶部
+                        $( '.swiper-slide' ).animate({scrollTop: 0},10);//动画慢慢过渡到顶部
+                        //$( '.swiper-slide:last-child' ).animate({scrollTop: 0},10);//动画慢慢过渡到顶部
+                        updateNavPosition();
+                }
+        }
+
+})
+
+function updateNavPosition(){
+                $('#swiper-container4 .active-nav').removeClass('active-nav')
+                var activeNav = $('#swiper-container4 .swiper-slide').eq(mySwiper5.activeIndex).addClass('active-nav');
+
+
+                if (!activeNav.hasClass('swiper-slide-visible')) {
+                    console.log(1);
+                        if (activeNav.index()>mySwiper4.activeIndex) {
+                                console.log(2);
+                                var thumbsPerNav = Math.floor(mySwiper4.width/activeNav.width())-1
+                                mySwiper4.slideTo(activeNav.index()-thumbsPerNav)
+                        }
+                        else {
+                                console.log(3);
+                                mySwiper4.slideTo(activeNav.index())
+                        }	
+                }
+        }  
+
+</script>
+</html>

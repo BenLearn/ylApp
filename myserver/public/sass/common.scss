@@ -3,147 +3,6 @@
 **/
 @import "variable";
 
-
-html {/* font-size: 625%; */ /*100 ÷ 16 × 100% = 625%*/ 
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;}
-    html * {
-        outline: none;
-        -webkit-text-size-adjust: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      }
-      html,
-      body {
-        font-family: sans-serif;
-      }
-      /* 内外边距通常让各个浏览器样式的表现位置不同 */
-      body,
-      div,
-      dl,
-      dt,
-      dd,
-      ul,
-      ol,
-      li,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      pre,
-      code,
-      form,
-      fieldset,
-      legend,
-      input,
-      textarea,
-      p,
-      blockquote,
-      th,
-      td,
-      hr,
-      button,
-      article,
-      aside,
-      details,
-      figcaption,
-      figure,
-      footer,
-      header,
-      hgroup,
-      menu,
-      nav,
-      section {
-        margin: 0;
-        padding: 0;
-      }
-      input,
-      select,
-      textarea {
-        font-size: 100%;
-      }
-      /* 去掉各 Table  cell 的边距并让其边重合 */
-      table {
-        border-collapse: collapse;
-        border-spacing: 0;
-      }
-      /* 去除默认边框 */
-      fieldset,
-      img {
-        border: 0;
-      }
-      /* 去掉 firefox 下此元素的边框 */
-      abbr,
-      acronym {
-        border: 0;
-        font-variant: normal;
-      }
-      /* 一致的 del 样式 */
-      del {
-        text-decoration: line-through;
-      }
-      address,
-      caption,
-      cite,
-      code,
-      dfn,
-      em,
-      th,
-      var {
-        font-style: normal;
-        font-weight: 500;
-      }
-      /* 去掉列表前的标识, li 会继承 */
-      ol,
-      ul {
-        list-style: none;
-      }
-      /* 对齐是排版最重要的因素, 别让什么都居中 */
-      caption,
-      th {
-        text-align: left;
-      }
-      /* 来自 yahoo, 让标题都自定义, 适应多个系统应用 */
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-size: 100%;
-        font-weight: 500;
-      }
-      q:before,
-      q:after {
-        content: '';
-      }
-      /* 统一上标和下标 */
-      sub,
-      sup {
-        font-size: 75%;
-        line-height: 0;
-        position: relative;
-        vertical-align: baseline;
-      }
-      sup {
-        top: -0.5em;
-      }
-      sub {
-        bottom: -0.25em;
-      }
-      /* 正常链接 未访问 */
-      /* 鼠标悬停 */
-      a:hover {
-        text-decoration: underline;
-      }
-      /* 默认不显示下划线，保持页面简洁 */
-      ins,
-      a {
-        text-decoration: none;
-      }
-          
-
 body{font-family:Helvetica;}
 button,input{border:0;}
 li{ list-style-type :none;}
@@ -188,13 +47,22 @@ html,body{width: 100%; height: 100%;}
 
 .bgfff{background: #fff;}
 .body_bg{background: #eaeaea;}
-.index_title_box{/* position: fixed; left: 0; top:0; right:0; */ background: #057CC7; line-height: 1.28rem /* 96/75 */; height: 1.28rem; position: relative;}
+
+/** 主页 **/
+.index_title_box{/* position: fixed; left: 0; top:0; right:0; */ background: #057CC7; line-height: 1.28rem /* 96/75 */; height: 1.28rem; position: relative;
+    .swiper-container.index_title{ width: 75%;
+        .swiper-slide{
+            color:#fff; text-align: center; opacity: .6;
+            &.active-nav{opacity: 1;
+                &:before{
+                    content:''; position: absolute; 
+                    bottom: 0; left: 50%; width: .533333rem /* 40/75 */; height: .08rem /* 6/75 */; margin-left: -.266667rem /* 20/75 */; border-radius: 2px; background: #fff!important;
+                }
+            }
+        }
+    }
+}
 .index_content_box{/* position: fixed; left: 0; top: 1.28rem  *//* 96/75 *//* ; bottom:0; right:0; overflow-y: auto; */} 
-.swiper-container.index_title{ /* line-height: 1.28rem */ /* 96/75 ;*/ width: 75%;}
-.swiper-container.index_title .swiper-slide{color:#fff; text-align: center; opacity: .6;}
-.swiper-container.index_title .swiper-slide.active-nav{ opacity: 1;}
-.swiper-container.index_title .swiper-slide.active-nav::before{content:''; position: absolute; 
-    bottom: 0; left: 50%; width: .533333rem /* 40/75 */; height: .08rem /* 6/75 */; margin-left: -.266667rem /* 20/75 */; border-radius: 2px; background: #fff!important;}
 .index_alarm{padding-top: .4rem /* 30/75 */; margin-bottom: .4rem /* 30/75 */; background:#fff;}
 .index_alarm ul li{float: left; width: 33.3333%; text-align: center; margin-bottom: .4rem /* 30/75 */;} 
 .index_alarm_list_C{cursor:pointer; width: 1.6rem /* 120/75 */; margin:0 auto;}
@@ -292,9 +160,24 @@ html,body{width: 100%; height: 100%;}
 .alarm_box{margin-bottom: .2rem /* 15/75 */; padding: .266667rem /* 20/75 */ .4rem /* 30/75 */; background: #fff;
     ul li{
         margin-bottom: .2rem /* 15/75 */;
+        >span{
+            display: inline-block;
+            float: left;
+            width:30%;
+        }
+        a{
+            display: block;
+            overflow: hidden;
+            color:#666;
+        }
+        .alarm_box_r{
+            float: left;
+            width: 32%;
+            margin-right:5%;
+        }
     }
 }
-#alarm-list{
+.alarm-list{
     >li{
         .alarm_box_button{
             text-align: right;
@@ -352,4 +235,82 @@ html,body{width: 100%; height: 100%;}
 .top5_bar,.top5_content{
     margin-bottom: .2rem /* 15/75 */; padding: .6rem /* 45/75 */ .426667rem /* 32/75 */; background: #fff;
 }
-  
+
+/** 详情页 **/
+.about_title_box{
+    line-height: 1.28rem /* 96/75 */; height: 1.28rem; position: relative; border-bottom: .026667rem /* 2/75 */ solid #F4F4F4;
+    .swiper-container{ 
+        .swiper-slide{
+            text-align: center; opacity: .6; width:15%; padding:0 .16rem /* 12/75 */ ; 
+            @include fontDpr(12);
+            &:nth-child(1),&:nth-child(2){
+                width:20%;
+            }
+            &.active-nav{
+                opacity: 1;
+                color: #057CC7;
+                &:before{
+                    content:''; position: absolute; 
+                    bottom: 0; left: 50%; width: .533333rem /* 40/75 */; height: .08rem /* 6/75 */; margin-left: -.266667rem /* 20/75 */; border-radius: 2px; background: #057CC7!important;
+                }
+            }
+        }
+    }
+}
+.about_alarm_box{
+    padding: .48rem /* 36/75 */ 0 ;
+    border-bottom: .026667rem /* 2/75 */ solid #EAEAEA;
+    .l{
+        float: left;
+        padding: .266667rem /* 20/75 */;
+        >span{
+            padding: .133333rem /* 10/75 */ .266667rem /* 20/75 */;
+            @include radius(.133333rem /* 10/75 */);
+            @include fontDpr(11);
+            color:#fff;
+        }
+    }  
+    &.red{
+        .l{
+            >span{
+                @include linearGradient(#FFB266,#FF4280);
+            } 
+        }        
+    }  
+    &.orange{
+        .l{
+            >span{
+                @include linearGradient(#FFC466,#F09E55);
+            } 
+        }        
+    }
+    &.yellow{
+        .l{
+            >span{
+                @include linearGradient(#DCE31A,#E6C802);
+            } 
+        }        
+    }
+    &.blue{
+        .l{
+            >span{
+                @include linearGradient(#33E9FF,#0D87D5);
+            } 
+        }        
+    }
+    .r{
+        overflow: hidden;
+        >a{
+            display: block;
+            margin-bottom: .066667rem /* 5/75 */;
+            @include textLine1;
+            @include fontDpr(12);
+        }
+        >span{
+            display: block;
+            @include textLine1;
+            @include fontDpr(11);
+            color:#999;
+        }
+    }
+}

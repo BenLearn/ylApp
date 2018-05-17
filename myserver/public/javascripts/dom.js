@@ -85,9 +85,11 @@ var $resource ={
     },
 }
 
-
 function mescrollInit(){   //滚动加载实例化
-    $(function(){
+    $(function(){        
+        //链接
+        
+         
         //创建MeScroll对象
         var mescroll = new MeScroll("mescroll", {
             down: {
@@ -171,14 +173,13 @@ function mescrollInit(){   //滚动加载实例化
                                 var newObj=newArr[i];
                                 var str='';
                                 str+='<div class="alarm_box"><ul>'
-                                            +'<li>id:'+newObj.id+'</li>'
                                             +'<li class="clearfix">告警标题：</li>'
-                                            +'<li class="clearfix c_blue">'+newObj.title+'</li>'
+                                            +'<li class="clearfix c_blue" onclick="anoutUrl()">'+newObj.title+'</li>'
                                             +'<li class="clearfix"><span>告警来源：</span><a>'+newObj.source+'</a></li>'
                                             +'<li class="clearfix"><span>资源类型：</span><a>'+newObj.type+'</a></li>'
                                             +'<li class="clearfix"><span>处理人：</span><a>'+newObj.user+'</a></li>'
-                                            +'<li class="clearfix"><span class="c_orange">重要度：</span><a>'+newObj.important+'</a></li>'
-                                            +'<li class="clearfix"><span class="c_green">状态：</span><a>'+newObj.state+'</a></li>'
+                                            +'<li class="clearfix"><span>重要度：</span><a class="c_orange">'+newObj.important+'</a></li>'
+                                            +'<li class="clearfix"><span>状态：</span><a class="c_green">'+newObj.state+'</a></li>'
                                             +'<li class="clearfix"><span>发生时间：</span><a>'+newObj.time+'</a></li>'
                                             +'<li class="clearfix"><span>最后发生时间：</span><a>'+newObj.lastTime+'</a></li>'
                                 +'</ul>'
@@ -245,9 +246,10 @@ function mescrollInit(){   //滚动加载实例化
         }
         
         
-        
     });
     
 }
 
-
+function anoutUrl(){
+    window.location.href = "about.html";
+}

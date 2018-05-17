@@ -433,7 +433,7 @@ button {
 /**
  * links
  */
-a {
+/* a {   2018-5-16项目不需要，隐藏
   color: #0e90d2;
 }
 a:hover,
@@ -444,7 +444,7 @@ a:focus {
   outline: thin dotted;
   outline: 1px auto -webkit-focus-ring-color;
   outline-offset: -2px;
-}
+} */
 /* Insert */
 ins {
   background: #ffa;
@@ -470,7 +470,7 @@ dfn[title] {
   font-style: normal;
 }
 /* Spacing for block elements */
-p,
+/* p,
 hr,
 ul,
 ol,
@@ -493,7 +493,7 @@ figure {
 * + fieldset,
 * + figure {
   margin-top: 1.6rem;
-}
+}   影响项目 2018-5-16*/
 /* Headings
    ========================================================================== */
 h1,
@@ -521,10 +521,10 @@ h2 {
   margin-top: 2em;
 }
 /* Ordered and unordered lists */
-ul,
+/* ul,  2018-5-16项目不需要，隐藏
 ol {
   padding-left: 2em;
-}
+} */
 /* Reset margin for nested lists */
 ul > li > ul,
 ul > li > ol,

@@ -88,80 +88,8 @@
                             <!-- 概览end -->
                             <!-- 告警start -->
                             <div class="swiper-slide body_bg mescroll"  id="mescroll">
-                                <div id="alarm-list">
-                                    <!-- <div class="alarm_box">
-                                        <ul>
-                                            <li class="clearfix">告警标题：</li>
-                                            <li class="clearfix c_blue">switch23a9b7上的内存使用率指标产生主要级别告警</li>
-                                            <li class="clearfix"><span>告警来源：</span><a>switch23a9b7</a></li>
-                                            <li class="clearfix"><span>资源类型：</span><a>三层交换机</a></li>
-                                            <li class="clearfix"><span>处理人：</span><a>admin</a></li>
-                                            <li class="clearfix"><span class="c_orange">重要度：</span><a>主要</a></li>
-                                            <li class="clearfix"><span class="c_green">状态：</span><a>已确认</a></li>
-                                            <li class="clearfix"><span>发生时间：</span><a>2017-12-14 10:25:58</a></li>
-                                            <li class="clearfix"><span>最后发生时间：</span><a>2018-01-04 11:37:06</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="alarm_box">
-                                        <ul>
-                                            <li class="clearfix">告警标题：</li>
-                                            <li class="clearfix c_blue">switch23a9b7上的内存使用率指标产生主要级别告警</li>
-                                            <li class="clearfix"><span>告警来源：</span><a>switch23a9b7</a></li>
-                                            <li class="clearfix"><span>资源类型：</span><a>三层交换机</a></li>
-                                            <li class="clearfix"><span>处理人：</span><a>admin</a></li>
-                                            <li class="clearfix"><span class="c_orange">重要度：</span><a>主要</a></li>
-                                            <li class="clearfix"><span class="c_green">状态：</span><a>已确认</a></li>
-                                            <li class="clearfix"><span>发生时间：</span><a>2017-12-14 10:25:58</a></li>
-                                            <li class="clearfix"><span>最后发生时间：</span><a>2018-01-04 11:37:06</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="alarm_box">
-                                        <ul>
-                                            <li class="clearfix">告警标题：</li>
-                                            <li class="clearfix c_blue">switch23a9b7上的内存使用率指标产生主要级别告警</li>
-                                            <li class="clearfix"><span>告警来源：</span><a>switch23a9b7</a></li>
-                                            <li class="clearfix"><span>资源类型：</span><a>三层交换机</a></li>
-                                            <li class="clearfix"><span>处理人：</span><a>admin</a></li>
-                                            <li class="clearfix"><span class="c_orange">重要度：</span><a>主要</a></li>
-                                            <li class="clearfix"><span class="c_green">状态：</span><a>已确认</a></li>
-                                            <li class="clearfix"><span>发生时间：</span><a>2017-12-14 10:25:58</a></li>
-                                            <li class="clearfix"><span>最后发生时间：</span><a>2018-01-04 11:37:06</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="alarm_box">
-                                        <ul>
-                                            <li class="clearfix">告警标题：</li>
-                                            <li class="clearfix c_blue">switch23a9b7上的内存使用率指标产生主要级别告警</li>
-                                            <li class="clearfix"><span>告警来源：</span><a>switch23a9b7</a></li>
-                                            <li class="clearfix"><span>资源类型：</span><a>三层交换机</a></li>
-                                            <li class="clearfix"><span>处理人：</span><a>admin</a></li>
-                                            <li class="clearfix"><span class="c_orange">重要度：</span><a>主要</a></li>
-                                            <li class="clearfix"><span class="c_green">状态：</span><a>已确认</a></li>
-                                            <li class="clearfix"><span>发生时间：</span><a>2017-12-14 10:25:58</a></li>
-                                            <li class="clearfix"><span>最后发生时间：</span><a>2018-01-04 11:37:06</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="alarm_box">
-                                        <ul>
-                                            <li class="clearfix">告警标题：</li>
-                                            <li class="clearfix c_blue">switch23a9b7上的内存使用率指标产生主要级别告警</li>
-                                            <li class="clearfix"><span>告警来源：</span><a>switch23a9b7</a></li>
-                                            <li class="clearfix"><span>资源类型：</span><a>三层交换机</a></li>
-                                            <li class="clearfix"><span>处理人：</span><a>admin</a></li>
-                                            <li class="clearfix"><span class="c_blue">重要度：</span><a>警告</a></li>
-                                            <li class="clearfix"><span class="c_red">状态：</span><a>未确认</a></li>
-                                            <li class="clearfix"><span>发生时间：</span><a>2017-12-14 10:25:58</a></li>
-                                            <li class="clearfix"><span>最后发生时间：</span><a>2018-01-04 11:37:06</a></li>
-                                        </ul>
-                                    </div> -->
+                                <div id="alarm-list" class="alarm-list">
                                 </div>
-
-                                <!-- <ul id="newsList" class="news-list">
-                                    <li>
-                                        <p>【新闻1】标题标题标题标题</p>
-                                        <p class="new-content">内容内容内容内容内容内容内容内容内容</p>
-                                    </li>
-                                </ul> -->
                             </div>
                             <!-- 告警end -->
                             <!-- 资源start -->
@@ -256,38 +184,38 @@
                                         }
                                 }
                         })
-                        var mySwiper3 = new Swiper('#swiper-container3',{
-                        //autoHeight:true,    
-                        on:{
-                                slideChangeTransitionStart: function(){
-                                                //$( '.swiper-container' ).scrollTop(0);这样是直接到顶部，往往会出现闪屏，
-                                                //$( '.index_content_box' ).animate({scrollTop: 0},10);//动画慢慢过渡到顶部
-                                                $( '.swiper-slide:first-child' ).animate({scrollTop: 0},10);//动画慢慢过渡到顶部
-                                                $( '.swiper-slide:last-child' ).animate({scrollTop: 0},10);//动画慢慢过渡到顶部
-                                                updateNavPosition()
-                                        }
-                                }
+var mySwiper3 = new Swiper('#swiper-container3',{
+//autoHeight:true,    
+on:{
+        slideChangeTransitionStart: function(){
+                        //$( '.swiper-container' ).scrollTop(0);这样是直接到顶部，往往会出现闪屏，
+                        //$( '.index_content_box' ).animate({scrollTop: 0},10);//动画慢慢过渡到顶部
+                        $( '.swiper-slide:first-child' ).animate({scrollTop: 0},10);//动画慢慢过渡到顶部
+                        $( '.swiper-slide:last-child' ).animate({scrollTop: 0},10);//动画慢慢过渡到顶部
+                        updateNavPosition()
+                }
+        }
 
-                        })
+})
 
-                        function updateNavPosition(){
-                                        $('#swiper-container2 .active-nav').removeClass('active-nav')
-                                        var activeNav = $('#swiper-container2 .swiper-slide').eq(mySwiper3.activeIndex).addClass('active-nav');
+function updateNavPosition(){
+                $('#swiper-container2 .active-nav').removeClass('active-nav')
+                var activeNav = $('#swiper-container2 .swiper-slide').eq(mySwiper3.activeIndex).addClass('active-nav');
 
 
-                                        if (!activeNav.hasClass('swiper-slide-visible')) {
-                                         console.log(1);
-                                                if (activeNav.index()>mySwiper2.activeIndex) {
-                                                        console.log(2);
-                                                        var thumbsPerNav = Math.floor(mySwiper2.width/activeNav.width())-1
-                                                        mySwiper2.slideTo(activeNav.index()-thumbsPerNav)
-                                                }
-                                                else {
-                                                        console.log(3);
-                                                        mySwiper2.slideTo(activeNav.index())
-                                                }	
-                                        }
-                                }
+                if (!activeNav.hasClass('swiper-slide-visible')) {
+                    console.log(1);
+                        if (activeNav.index()>mySwiper2.activeIndex) {
+                                console.log(2);
+                                var thumbsPerNav = Math.floor(mySwiper2.width/activeNav.width())-1
+                                mySwiper2.slideTo(activeNav.index()-thumbsPerNav)
+                        }
+                        else {
+                                console.log(3);
+                                mySwiper2.slideTo(activeNav.index())
+                        }	
+                }
+        }
 
 //echart实例化
 function spread_echart(id){
